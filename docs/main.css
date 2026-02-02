@@ -1,0 +1,342 @@
+:root{
+  --bg:#f3efe7;
+  --bg-deep:#c7c1b6;
+  --ink:#1a1a1a;
+  --muted:#5f5b56;
+  --accent:#ff6b4a;
+  --accent-2:#2f7460;
+  --card:#fdf9f1;
+  --line:rgba(26,26,26,.15);
+  --shadow:0 24px 40px rgba(26,26,26,.18);
+  --radius:20px;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  font-family:"DM Serif Display", "Georgia", serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% 10%, #fff7e8 0%, transparent 70%),
+    radial-gradient(900px 500px at 80% 20%, #f6d7c8 0%, transparent 70%),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-deep) 100%);
+  min-height:100vh;
+}
+
+.app{
+  display:grid;
+  grid-template-columns:332px 1fr;
+  min-height:100vh;
+}
+
+.sidebar{
+  background:rgba(255,255,255,.75);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  border-right:1px solid var(--line);
+  padding:32px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.brand{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.brand__logo{
+  width:64px;
+  height:auto;
+  display:block;
+}
+.brand__text{
+  display:flex;
+  flex-direction:column;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.brand__title{ font-size:20px; letter-spacing:.6px; }
+.brand__sub{ font-size:12px; color:var(--muted); text-transform:uppercase; }
+
+.nav{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.menu-toggle{
+  display:none;
+  border:1px solid var(--line);
+  background:var(--card);
+  padding:10px 14px;
+  border-radius:12px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  cursor:pointer;
+}
+.nav__link{
+  border:1px solid transparent;
+  background:transparent;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 14px;
+  border-radius:14px;
+  cursor:pointer;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size:14px;
+  color:var(--ink);
+  transition:all .2s ease;
+}
+.nav__link:hover{ border-color:var(--line); transform:translateX(2px); }
+.nav__link.is-active{
+  background:var(--card);
+  box-shadow:var(--shadow);
+  border-color:rgba(255,107,74,.35);
+}
+.nav__dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--accent-2);
+  box-shadow:0 0 0 4px rgba(47,116,96,.15);
+  flex:0 0 10px;
+  display:inline-block;
+  aspect-ratio:1 / 1;
+}
+
+.sidebar__footer{
+  margin-top:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.contact{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:14px;
+  box-shadow:var(--shadow);
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.contact__title{
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+.contact__item{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:6px 0;
+  border-bottom:1px dashed rgba(26,26,26,.12);
+}
+.contact__item:last-child{ border-bottom:none; }
+.contact__label{
+  color:var(--muted);
+  font-size:12px;
+}
+.contact__value{
+  font-size:13px;
+}
+.status{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size:13px;
+  color:var(--muted);
+}
+.status__lamp{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#47b881;
+  box-shadow:0 0 0 5px rgba(71,184,129,.2);
+}
+.ghost{
+  border:1px solid var(--line);
+  background:transparent;
+  padding:10px 16px;
+  border-radius:999px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  cursor:pointer;
+}
+
+.content{
+  padding:36px 48px 64px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  margin-bottom:30px;
+}
+.eyebrow{
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.topbar h1{ font-size:32px; }
+.topbar__actions{ display:flex; gap:12px; }
+
+.pill{
+  border:none;
+  background:var(--accent);
+  color:white;
+  padding:10px 18px;
+  border-radius:999px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  cursor:pointer;
+  box-shadow:0 12px 20px rgba(255,107,74,.25);
+}
+.pill.outline{
+  background:transparent;
+  color:var(--ink);
+  border:1px solid var(--line);
+  box-shadow:none;
+}
+
+.page{
+  display:none;
+  animation:fadeUp .4s ease;
+}
+.page.is-visible{ display:block; }
+
+.page__grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:24px;
+  border:1px solid rgba(26,26,26,.08);
+  box-shadow:var(--shadow);
+}
+.card.highlight{
+  background:linear-gradient(140deg, #fff1e3, #fffdf8);
+}
+
+.service-card{
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.service-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(255,107,74,.4);
+  box-shadow:0 28px 45px rgba(26,26,26,.22);
+}
+.service-card__title{
+  font-size:22px;
+  margin-top:12px;
+}
+.service-card__meta{
+  color:var(--muted);
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  margin-top:6px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
+  gap:16px;
+  margin-top:18px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.stats__label{ display:block; color:var(--muted); font-size:12px; }
+.stats__value{ font-size:22px; }
+
+.list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:12px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.list li{ display:flex; justify-content:space-between; gap:12px; color:var(--muted); }
+
+.meter{
+  height:12px;
+  background:rgba(26,26,26,.08);
+  border-radius:999px;
+  overflow:hidden;
+  margin:12px 0;
+}
+.meter span{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.stack{ display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+.stack__item{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 12px;
+  border-radius:12px;
+  background:rgba(26,26,26,.05);
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.badge{
+  background:rgba(255,107,74,.2);
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+}
+
+.timeline{ display:flex; flex-direction:column; gap:14px; margin-top:14px; }
+.timeline__time{
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size:12px;
+  color:var(--muted);
+  display:block;
+}
+
+.avatar-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.avatar-row span{
+  padding:8px 12px;
+  background:rgba(47,116,96,.15);
+  border-radius:999px;
+}
+
+.report-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+  gap:16px;
+  margin-top:14px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.report__label{ font-size:12px; color:var(--muted); display:block; }
+.report__value{ font-size:18px; }
+
+.muted{ color:var(--muted); font-family:"Space Grotesk", "Trebuchet MS", sans-serif; }
+
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(12px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+@media (max-width:900px){
+  .app{ grid-template-columns:1fr; }
+  .sidebar{ position:sticky; top:0; z-index:10; flex-direction:column; align-items:stretch; }
+  .menu-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+  .nav{ display:none; flex-direction:column; }
+  .sidebar.is-open .nav{ display:flex; }
+  .sidebar__footer{ display:none; }
+  .content{ padding:24px; }
+  .topbar{ flex-direction:column; align-items:flex-start; }
+}

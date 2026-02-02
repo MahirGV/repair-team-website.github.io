@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Repair Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand__logo" src="logo-transparent-V2.png" alt="RT Repair Team">
+        <div class="brand__text">
+          <span class="brand__title">Repair</span>
+          <span class="brand__sub">Team</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-nav">
+        Menyu
+      </button>
+
+      <nav class="nav" id="sidebar-nav" aria-label="Səhifə menyusu">
+        <button class="nav__link is-active" data-page="dashboard">
+          <span class="nav__dot"></span>
+          <span>1. Haqqımızda</span>
+        </button>
+        <button class="nav__link" data-page="projects">
+          <span class="nav__dot"></span>
+          <span>2. Servis göstərdiyimiz avadanlıqlar</span>
+        </button>
+        <button class="nav__link" data-page="calendar">
+          <span class="nav__dot"></span>
+          <span>3. Qiymətləndirmə</span>
+        </button>
+        <button class="nav__link" data-page="team">
+          <span class="nav__dot"></span>
+          <span>4. Müqavilə</span>
+        </button>
+        <button class="nav__link" data-page="reports">
+          <span class="nav__dot"></span>
+          <span>5. Əməkdaşlıq etdiklərimiz</span>
+        </button>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="contact">
+          <p class="contact__title">Əlaqə</p>
+          <div class="contact__item">
+            <span class="contact__label">WP</span>
+            <span class="contact__value">+994 50 123 45 67</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label">Telefon</span>
+            <span class="contact__value">+994 12 555 12 12</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label">Mail</span>
+            <span class="contact__value">office@example.com</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="page-eyebrow">Haqqında</p>
+          <h1 id="page-title">Haqqımızda</h1>
+        </div>
+        <div class="topbar__actions" aria-hidden="true"></div>
+      </header>
+
+      <section class="page is-visible" id="dashboard" aria-labelledby="dashboard-title" data-eyebrow="Haqqında" data-title="Haqqımızda">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="dashboard-title">İdarə paneli</h2>
+            <p>Prioritet tapşırıqlar, kritik xəbərdarlıqlar və gündəlik dinamika burada.</p>
+            <div class="stats">
+              <div>
+                <span class="stats__label">Aktiv layihə</span>
+                <span class="stats__value">12</span>
+              </div>
+              <div>
+                <span class="stats__label">Gecikmələr</span>
+                <span class="stats__value">2</span>
+              </div>
+              <div>
+                <span class="stats__label">Yeni sorğu</span>
+                <span class="stats__value">8</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Son aktivlik</h3>
+            <ul class="list">
+              <li><span>Brifinq təsdiqləndi</span><span>09:20</span></li>
+              <li><span>Marketinq planı yeniləndi</span><span>10:05</span></li>
+              <li><span>Müştəri görüşü planlandı</span><span>11:30</span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Resurs yüklənməsi</h3>
+            <div class="meter">
+              <span style="width:72%"></span>
+            </div>
+            <p class="muted">Bu həftə komanda 72% kapasitedə işləyir.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="projects" aria-labelledby="projects-title" data-eyebrow="Servis" data-title="Servis göstərdiyimiz avadanlıqlar">
+        <div class="page__grid">
+          <div class="card service-card" data-page="fridge" role="button" tabindex="0" aria-label="Soyuducu haqqında">
+            <h2 id="projects-title">Soyuducu</h2>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Soyuducu</div>
+            <div class="service-card__meta">Məişət və sənaye tipli soyutma sistemləri</div>
+          </div>
+          <div class="card service-card" data-page="oven" role="button" tabindex="0" aria-label="Soba haqqında">
+            <h3>Soba</h3>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Soba</div>
+            <div class="service-card__meta">Qaz və elektrik soba modelləri</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="fridge" aria-labelledby="fridge-title" data-eyebrow="Ətraflı" data-title="Soyuducu">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="fridge-title">Soyuducu servisi</h2>
+            <p>Servis xidməti: diaqnostika, freon doldurma, kompressor və elektron lövhə təmiri.</p>
+            <ul class="list">
+              <li><span>Yerində baxış</span><span>30 dəq</span></li>
+              <li><span>Ehtiyat hissə</span><span>Orijinal</span></li>
+              <li><span>Zəmanət</span><span>6 ay</span></li>
+            </ul>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="oven" aria-labelledby="oven-title" data-eyebrow="Ətraflı" data-title="Soba">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="oven-title">Soba servisi</h2>
+            <p>Servis xidməti: alov sistemi, termostat, sensor və elektrik xətti yoxlanışı.</p>
+            <ul class="list">
+              <li><span>Yerində baxış</span><span>30 dəq</span></li>
+              <li><span>Təhlükəsizlik</span><span>Testlə</span></li>
+              <li><span>Zəmanət</span><span>6 ay</span></li>
+            </ul>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="calendar" aria-labelledby="calendar-title" data-eyebrow="Qiymət" data-title="Qiymətləndirmə">
+        <div class="page__grid">
+          <div class="card">
+            <h2 id="calendar-title">Təqvim</h2>
+            <p>Bu həftə planlaşdırılan əsas görüşlər.</p>
+            <div class="timeline">
+              <div>
+                <span class="timeline__time">B.e 14:00</span>
+                <span>Strategiya iclası</span>
+              </div>
+              <div>
+                <span class="timeline__time">Ç.a 10:30</span>
+                <span>Dizayn təqdimatı</span>
+              </div>
+              <div>
+                <span class="timeline__time">C.a 16:00</span>
+                <span>Müştəri demo</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Tez xatırlatma</h3>
+            <p>Komanda reytinqi üçün sorğunu cümə axşamına qədər tamamlayın.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="team" aria-labelledby="team-title" data-eyebrow="Sənədlər" data-title="Müqavilə">
+        <div class="page__grid">
+          <div class="card">
+            <h2 id="team-title">Komanda</h2>
+            <p>Prioritet rollar və fokus sahələri.</p>
+            <div class="avatar-row">
+              <span>R. Məmmədova</span>
+              <span>N. Əliyev</span>
+              <span>L. Qasımova</span>
+              <span>T. Həsənli</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Performans</h3>
+            <div class="meter">
+              <span style="width:88%"></span>
+            </div>
+            <p class="muted">Komandanın hədəfləri 88% səviyyəsində icradadır.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="reports" aria-labelledby="reports-title" data-eyebrow="Tərəfdaşlar" data-title="Əməkdaşlıq etdiklərimiz">
+        <div class="page__grid">
+          <div class="card">
+            <h2 id="reports-title">Hesabatlar</h2>
+            <p>Rəqəmsal göstəricilər və nəticələr.</p>
+            <div class="report-grid">
+              <div>
+                <span class="report__label">Aylıq gəlir</span>
+                <span class="report__value">₼ 128,400</span>
+              </div>
+              <div>
+                <span class="report__label">Müştəri məmnunluğu</span>
+                <span class="report__value">94%</span>
+              </div>
+              <div>
+                <span class="report__label">Gözləmədə</span>
+                <span class="report__value">6</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Yükləmələr</h3>
+            <p>Son 7 gün ərzində 14 yeni hesabat əlavə olunub.</p>
+            <button class="pill">Arxivə bax</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
