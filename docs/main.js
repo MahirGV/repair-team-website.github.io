@@ -6,6 +6,8 @@ const menuToggle = document.querySelector('.menu-toggle');
 const pageEyebrow = document.querySelector('#page-eyebrow');
 const pageTitle = document.querySelector('#page-title');
 const pageBack = document.querySelector('#page-back');
+const navGroups = Array.from(document.querySelectorAll('.nav__group'));
+const navSubgroups = Array.from(document.querySelectorAll('.nav__subgroup'));
 
 const showPage = (id) => {
   pages.forEach((page) => {
@@ -34,6 +36,11 @@ const showPage = (id) => {
 
 triggers.forEach((trigger) => {
   trigger.addEventListener('click', (event) => {
+    const isNavLink = trigger.classList.contains('nav__link') || trigger.classList.contains('nav__sublink');
+    const inSubmenu = trigger.closest('.nav__sub') || trigger.closest('.nav__subsub');
+    if (inSubmenu) {
+      event.stopPropagation();
+    }
     if (trigger.tagName === 'A') {
       event.preventDefault();
     }
@@ -65,6 +72,39 @@ if (menuToggle && sidebar) {
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 }
+
+const toggleGroup = (element) => {
+  const isOpen = element.classList.toggle('is-open');
+  return isOpen;
+};
+
+navGroups.forEach((group) => {
+  const mainLink = group.querySelector('.nav__link');
+  if (!mainLink) {
+    return;
+  }
+  mainLink.addEventListener('click', (event) => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleGroup(group);
+    }
+  });
+});
+
+navSubgroups.forEach((subgroup) => {
+  const sublink = subgroup.querySelector('.nav__sublink');
+  if (!sublink) {
+    return;
+  }
+  sublink.addEventListener('click', (event) => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleGroup(subgroup);
+    }
+  });
+});
 
 const defaultPage = links[0]?.dataset.page;
 if (defaultPage) {

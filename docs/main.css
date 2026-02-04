@@ -24,7 +24,7 @@ body{
 
 .app{
   display:grid;
-  grid-template-columns:332px 1fr;
+  grid-template-columns:346px 1fr;
   min-height:100vh;
 }
 
@@ -104,11 +104,12 @@ body{
 
 .nav__group{
   position:relative;
+  padding-right:14px;
 }
 .nav__sub{
   display:none;
   position:absolute;
-  left:100%;
+  left:calc(100% - 12px);
   top:0;
   min-width:220px;
   flex-direction:column;
@@ -120,7 +121,16 @@ body{
   box-shadow:var(--shadow);
   z-index:5;
 }
-.nav__group:hover .nav__sub{
+.nav__sub::before{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:0;
+  width:18px;
+  height:100%;
+}
+.nav__group:hover .nav__sub,
+.nav__sub:hover{
   display:flex;
 }
 .nav__sublink{
@@ -138,18 +148,37 @@ body{
 }
 .nav__sublink:hover{ color:var(--ink); }
 .nav__subgroup{
+  position:relative;
   display:flex;
   flex-direction:column;
   gap:6px;
 }
 .nav__subsub{
   display:none;
+  position:absolute;
+  left:100%;
+  top:0;
+  min-width:220px;
   flex-direction:column;
   gap:6px;
-  padding-left:14px;
+  padding:10px 12px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  z-index:6;
 }
-.nav__subgroup:hover .nav__subsub{
+.nav__subgroup:hover .nav__subsub,
+.nav__subsub:hover{
   display:flex;
+}
+.nav__subsub::before{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:0;
+  width:18px;
+  height:100%;
 }
 
 .sidebar__footer{
@@ -284,6 +313,9 @@ body{
 
 .service-card{
   cursor:pointer;
+  display:flex;
+  gap:12px;
+  align-items:center;
   transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .service-card:hover{
@@ -299,6 +331,24 @@ body{
   color:var(--muted);
   font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
   margin-top:6px;
+}
+.service-card__body{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.service-card__image{
+  width:72px;
+  height:72px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:0;
+  display:block;
+  flex:0 0 72px;
+}
+.service-card__image--contain{
+  object-fit:contain;
+  background:rgba(26,26,26,.04);
 }
 
 .service-items{
@@ -452,6 +502,22 @@ body{
   .menu-toggle{ display:inline-flex; align-items:center; justify-content:center; }
   .nav{ display:none; flex-direction:column; }
   .sidebar.is-open .nav{ display:flex; }
+  .nav__sub,
+  .nav__subsub{
+    position:static;
+    display:none;
+    min-width:unset;
+    padding:6px 0 6px 18px;
+    box-shadow:none;
+    border:none;
+    background:transparent;
+  }
+  .nav__group:hover .nav__sub,
+  .nav__subgroup:hover .nav__subsub{ display:none; }
+  .nav__group.is-open .nav__sub,
+  .nav__subgroup.is-open .nav__subsub{ display:flex; }
+  .nav__sub::before,
+  .nav__subsub::before{ display:none; }
   .sidebar__footer{ display:none; }
   .content{ padding:24px; }
   .topbar{ flex-direction:column; align-items:flex-start; }
