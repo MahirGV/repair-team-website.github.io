@@ -212,6 +212,9 @@ body{
   grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
   gap:20px;
 }
+.service-grid{
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
 
 .card{
   background:var(--card);
@@ -241,6 +244,20 @@ body{
   color:var(--muted);
   font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
   margin-top:6px;
+}
+
+.service-items{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+  gap:10px;
+  margin-top:14px;
+  color:var(--muted);
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.service-items span{
+  background:rgba(26,26,26,.05);
+  padding:8px 10px;
+  border-radius:12px;
 }
 
 .stats{
@@ -339,4 +356,8 @@ body{
   .sidebar__footer{ display:none; }
   .content{ padding:24px; }
   .topbar{ flex-direction:column; align-items:flex-start; }
+  .service-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width:620px){
+  .service-grid{ grid-template-columns:1fr; }
 }

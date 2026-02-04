@@ -113,7 +113,7 @@
       </section>
 
       <section class="page" id="projects" aria-labelledby="projects-title" data-eyebrow="Servis" data-title="Servis göstərdiyimiz avadanlıqlar">
-        <div class="page__grid">
+        <div class="page__grid service-grid">
           <div class="card service-card" data-page="fridge" role="button" tabindex="0" aria-label="Soyuducu haqqında">
             <h2 id="projects-title">Soyuducu</h2>
             <p class="muted">Kliklə və ətraflı məlumata keç.</p>
@@ -126,6 +126,36 @@
             <div class="service-card__title">Soba</div>
             <div class="service-card__meta">Qaz və elektrik soba modelləri</div>
           </div>
+          <div class="card service-card" data-page="helper" role="button" tabindex="0" aria-label="Köməkçi avadanlıqlar haqqında">
+            <h3>Köməkçi avadanlıqlar</h3>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Köməkçi avadanlıqlar</div>
+            <div class="service-card__meta">Gündəlik məişət cihazları</div>
+          </div>
+          <div class="card service-card" data-page="service-line" role="button" tabindex="0" aria-label="Servis xətti haqqında">
+            <h3>Servis xətti</h3>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Servis xətti</div>
+            <div class="service-card__meta">Diaqnostika, təmir, quraşdırma</div>
+          </div>
+          <div class="card service-card" data-page="laundry" role="button" tabindex="0" aria-label="Yuma dəzgahlar haqqında">
+            <h3>Yuma dəzgahlar</h3>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Yuma dəzgahlar</div>
+            <div class="service-card__meta">Paltaryuyan sistemlər</div>
+          </div>
+          <div class="card service-card" data-page="dishwasher" role="button" tabindex="0" aria-label="Qabyuyan maşınlar haqqında">
+            <h3>Qabyuyan maşınlar</h3>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Qabyuyan maşınlar</div>
+            <div class="service-card__meta">Ev və obyekt modelləri</div>
+          </div>
+          <div class="card service-card" data-page="cookers" role="button" tabindex="0" aria-label="Bişiricilər haqqında">
+            <h3>Bişiricilər</h3>
+            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            <div class="service-card__title">Bişiricilər</div>
+            <div class="service-card__meta">Kiçik mətbəx cihazları</div>
+          </div>
         </div>
       </section>
 
@@ -134,6 +164,14 @@
           <div class="card highlight">
             <h2 id="fridge-title">Soyuducu servisi</h2>
             <p>Servis xidməti: diaqnostika, freon doldurma, kompressor və elektron lövhə təmiri.</p>
+            <div class="service-items">
+              <span>Single‑door</span>
+              <span>Double‑door</span>
+              <span>No‑Frost</span>
+              <span>Side‑by‑Side</span>
+              <span>Vitirin tipli</span>
+              <span>İnteqrasiya</span>
+            </div>
             <ul class="list">
               <li><span>Yerində baxış</span><span>30 dəq</span></li>
               <li><span>Ehtiyat hissə</span><span>Orijinal</span></li>
@@ -149,11 +187,109 @@
           <div class="card highlight">
             <h2 id="oven-title">Soba servisi</h2>
             <p>Servis xidməti: alov sistemi, termostat, sensor və elektrik xətti yoxlanışı.</p>
+            <div class="service-items">
+              <span>Qaz sobası</span>
+              <span>Elektrik sobası</span>
+              <span>Mini soba</span>
+              <span>İnteqrasiya soba</span>
+              <span>Konveksiya</span>
+              <span>İkili kamera</span>
+            </div>
             <ul class="list">
               <li><span>Yerində baxış</span><span>30 dəq</span></li>
               <li><span>Təhlükəsizlik</span><span>Testlə</span></li>
               <li><span>Zəmanət</span><span>6 ay</span></li>
             </ul>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="helper" aria-labelledby="helper-title" data-eyebrow="Ətraflı" data-title="Köməkçi avadanlıqlar">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="helper-title">Köməkçi avadanlıqlar servisi</h2>
+            <p>Gündəlik məişət cihazlarının diaqnostika və təmiri.</p>
+            <div class="service-items">
+              <span>Mikrodalğalı soba</span>
+              <span>Ventilyator</span>
+              <span>Çaydan</span>
+              <span>Tozsoran</span>
+              <span>Blender</span>
+              <span>Ütü</span>
+            </div>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="service-line" aria-labelledby="service-line-title" data-eyebrow="Ətraflı" data-title="Servis xətti">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="service-line-title">Servis xətti</h2>
+            <p>Quraşdırma, diaqnostika və təmir xidmətləri.</p>
+            <div class="service-items">
+              <span>Quraşdırma</span>
+              <span>Diaqnostika</span>
+              <span>Təmir</span>
+              <span>Ehtiyat hissə</span>
+              <span>Profilaktika</span>
+              <span>Zəmanətli servis</span>
+            </div>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="laundry" aria-labelledby="laundry-title" data-eyebrow="Ətraflı" data-title="Yuma dəzgahlar">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="laundry-title">Yuma dəzgahlar servisi</h2>
+            <p>Paltaryuyan sistemlərin diaqnostika və təmiri.</p>
+            <div class="service-items">
+              <span>Ön yükləməli</span>
+              <span>Yuxarı yükləməli</span>
+              <span>İnvertor</span>
+              <span>Sənaye tipli</span>
+              <span>Qurutmalı</span>
+              <span>İnteqrasiya</span>
+            </div>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="dishwasher" aria-labelledby="dishwasher-title" data-eyebrow="Ətraflı" data-title="Qabyuyan maşınlar">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="dishwasher-title">Qabyuyan maşınlar servisi</h2>
+            <p>Məişət və obyekt qabyuyan sistemləri.</p>
+            <div class="service-items">
+              <span>Standart</span>
+              <span>İnteqrasiya</span>
+              <span>Kompakt</span>
+              <span>Yarım ölçü</span>
+              <span>Peşəkar</span>
+              <span>İnverter</span>
+            </div>
+            <button class="pill" data-page="projects">Geri qayıt</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="cookers" aria-labelledby="cookers-title" data-eyebrow="Ətraflı" data-title="Bişiricilər">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="cookers-title">Bişiricilər servisi</h2>
+            <p>Kiçik mətbəx bişirmə cihazları üçün servis.</p>
+            <div class="service-items">
+              <span>Airfryer</span>
+              <span>Multibişirici</span>
+              <span>Qril</span>
+              <span>Sandviç aparatı</span>
+              <span>Toster</span>
+              <span>Fritöz</span>
+            </div>
             <button class="pill" data-page="projects">Geri qayıt</button>
           </div>
         </div>
