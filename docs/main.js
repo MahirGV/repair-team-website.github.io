@@ -5,6 +5,7 @@ const sidebar = document.querySelector('.sidebar');
 const menuToggle = document.querySelector('.menu-toggle');
 const pageEyebrow = document.querySelector('#page-eyebrow');
 const pageTitle = document.querySelector('#page-title');
+const pageBack = document.querySelector('#page-back');
 
 const showPage = (id) => {
   pages.forEach((page) => {
@@ -17,6 +18,17 @@ const showPage = (id) => {
   if (activePage && pageEyebrow && pageTitle) {
     pageEyebrow.textContent = activePage.dataset.eyebrow || '';
     pageTitle.textContent = activePage.dataset.title || '';
+  }
+  if (activePage && pageBack) {
+    const backTarget = activePage.dataset.back;
+    if (backTarget) {
+      pageBack.dataset.page = backTarget;
+      pageBack.removeAttribute('aria-hidden');
+      pageBack.classList.add('is-visible');
+    } else {
+      pageBack.setAttribute('aria-hidden', 'true');
+      pageBack.classList.remove('is-visible');
+    }
   }
 };
 
