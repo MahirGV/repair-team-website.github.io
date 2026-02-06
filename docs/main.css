@@ -244,6 +244,9 @@ body{
 
 .content{
   padding:36px 48px 64px;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
 .topbar{
@@ -303,35 +306,60 @@ body{
   max-width:100%;
 }
 .about-card h2{
-  font-size:34px;
+  font-size:28px;
   margin-bottom:12px;
-  text-align:center;
+  text-align:left;
 }
 .about-card p{
-  font-size:26px;
-  line-height:1.75;
+  font-size:18px;
+  line-height:1.8;
   font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
   color:var(--muted);
-  text-align:center;
-  margin:0 0 18px;
+  text-align:left;
+  margin:0 0 14px;
 }
 .about-card p:last-of-type{ margin-bottom:0; }
 .about-list{
-  margin:20px auto 0;
+  margin:16px 0 0;
   padding:0;
   list-style:none;
   display:grid;
   gap:10px;
-  max-width:720px;
   font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
   color:var(--muted);
-  font-size:18px;
+  font-size:15px;
 }
 .about-list li{
   background:rgba(26,26,26,.05);
   border-radius:12px;
   padding:10px 14px;
-  text-align:center;
+  text-align:left;
+}
+.about-split{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:28px;
+  align-items:center;
+}
+.about-media{
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(26,26,26,.08);
+  border-radius:18px;
+  padding:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:240px;
+}
+.about-media img{
+  width:100%;
+  max-width:220px;
+  height:auto;
+  object-fit:contain;
+}
+.about-content{
+  display:flex;
+  flex-direction:column;
 }
 .service-grid{
   grid-template-columns:repeat(2, minmax(0, 1fr));
@@ -453,6 +481,23 @@ body{
   font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
   font-size:12px;
 }
+.fix-summary{
+  margin-top:18px;
+  padding:16px;
+  background:rgba(26,26,26,.04);
+  border-radius:14px;
+}
+.fix-summary h3{
+  margin-bottom:8px;
+  font-size:16px;
+}
+.fix-summary ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size:13px;
+}
 
 .visually-hidden{
   position:absolute;
@@ -567,6 +612,139 @@ body{
 
 .muted{ color:var(--muted); font-family:"Space Grotesk", "Trebuchet MS", sans-serif; }
 
+.footer{
+  margin-top:auto;
+  margin-bottom:0;
+  margin-left:0;
+  margin-right:0;
+  padding:28px 36px;
+  background:#2b2f33;
+  color:#f2f2f2;
+  border-radius:0;
+  grid-column:1 / -1;
+}
+.footer__grid{
+  display:grid;
+  grid-template-columns:1.2fr 2fr 1.4fr;
+  gap:20px;
+  align-items:center;
+}
+.footer__copy{
+  grid-column:1 / -1;
+  font-size:12px;
+  color:#c4c7cc;
+  margin-top:6px;
+}
+.footer__brand{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.footer__logo{
+  font-size:22px;
+  letter-spacing:2px;
+}
+.footer__sub{
+  font-size:12px;
+  color:#c4c7cc;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.footer__links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.footer__links a{
+  color:#f2f2f2;
+  text-decoration:none;
+  font-size:13px;
+}
+.footer__info{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:13px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.contact--footer{
+  background:transparent;
+  border:none;
+  padding:0;
+  box-shadow:none;
+  color:#f2f2f2;
+}
+.contact--footer .contact__title{ color:#c4c7cc; }
+.contact--footer .contact__label{ color:#c4c7cc; }
+.contact--footer .contact__value{ color:#f2f2f2; }
+
+.deal-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:24px;
+}
+.deal-card{
+  background:var(--card);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(26,26,26,.08);
+}
+.deal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+}
+.deal-header h2{
+  font-size:22px;
+}
+.deal-subtitle{
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+  color:var(--muted);
+  margin:6px 0 16px;
+}
+.deal-flow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  align-items:center;
+}
+.deal-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:10px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.deal-list li{
+  padding:10px 12px;
+  border:1px solid rgba(26,26,26,.12);
+  border-radius:10px;
+}
+.deal-steps{
+  list-style:none;
+  margin:10px 0 0;
+  padding:0;
+  display:grid;
+  gap:14px;
+  font-family:"Space Grotesk", "Trebuchet MS", sans-serif;
+}
+.deal-steps li{
+  position:relative;
+  padding-left:28px;
+}
+.deal-steps li::before{
+  content:"✦";
+  position:absolute;
+  left:0;
+  top:2px;
+  color:#b8860b;
+}
+
 
 @keyframes fadeUp{
   from{ opacity:0; transform:translateY(12px); }
@@ -600,6 +778,12 @@ body{
   .topbar{ flex-direction:column; align-items:flex-start; }
   .service-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
   .fridge-grid{ grid-template-columns:1fr; }
+  .deal-flow{ grid-template-columns:1fr; }
+  .deal-arrows{ display:none; }
+  .about-split{ grid-template-columns:1fr; }
+  .about-media{ min-height:180px; }
+  .footer{ margin:24px 0 0; }
+  .footer__grid{ grid-template-columns:1fr; }
 }
 @media (max-width:620px){
   .service-grid{ grid-template-columns:1fr; }
