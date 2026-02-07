@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="Review/logo-transparent-V2.png">
   <title>Repair Team</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css">
@@ -11,7 +12,7 @@
   <div class="app">
     <aside class="sidebar">
       <div class="brand">
-        <img class="brand__logo" src="logo-transparent-V2.png" alt="RT Repair Team">
+        <img class="brand__logo" src="Review/logo-transparent-V2.png" alt="RT Repair Team">
         <div class="brand__text">
           <span class="brand__title">Repair</span>
           <span class="brand__sub">Team</span>
@@ -27,21 +28,34 @@
           <span class="nav__dot"></span>
           <span>1. Haqqımızda</span>
         </button>
-        <button class="nav__link" data-page="projects">
-          <span class="nav__dot"></span>
-          <span>2. Servis göstərdiyimiz avadanlıqlar</span>
-        </button>
+        <div class="nav__group">
+          <button class="nav__link" data-page="projects">
+            <span class="nav__dot"></span>
+            <span>2. Servis göstərdiyimiz avadanlıqlar</span>
+          </button>
+          <div class="nav__sub">
+            <button class="nav__sublink" data-page="fridge">Soyuducu</button>
+            <button class="nav__sublink" data-page="oven">Soba</button>
+            <div class="nav__subgroup">
+              <button class="nav__sublink" data-page="helper">Köməkçi avadanlıqlar</button>
+              <div class="nav__subsub">
+                <button class="nav__sublink" data-page="helper-prep">Hazırlıq avadanlıqları</button>
+                <button class="nav__sublink" data-page="helper-fastfood">Fastfood avadanlıqları</button>
+                <button class="nav__sublink" data-page="helper-dough">Xəmir hazırlama avadanlıqları</button>
+              </div>
+            </div>
+            <button class="nav__sublink" data-page="service-line">Servis xətti</button>
+            <button class="nav__sublink" data-page="laundry">Qabyuyan</button>
+            <button class="nav__sublink" data-page="cookers">Bişiricilər</button>
+          </div>
+        </div>
         <button class="nav__link" data-page="calendar">
           <span class="nav__dot"></span>
-          <span>3. Qiymətləndirmə</span>
-        </button>
-        <button class="nav__link" data-page="team">
-          <span class="nav__dot"></span>
-          <span>4. Müqavilə</span>
+          <span>3. Qiymətləndirmə və Müqavilə</span>
         </button>
         <button class="nav__link" data-page="reports">
           <span class="nav__dot"></span>
-          <span>5. Əməkdaşlıq etdiklərimiz</span>
+          <span>4. Əməkdaşlıq etdiklərimiz</span>
         </button>
       </nav>
 
@@ -50,15 +64,15 @@
           <p class="contact__title">Əlaqə</p>
           <div class="contact__item">
             <span class="contact__label">WP</span>
-            <span class="contact__value">+994 50 123 45 67</span>
+            <span class="contact__value">+994 70 307 49 07</span>
           </div>
           <div class="contact__item">
             <span class="contact__label">Telefon</span>
-            <span class="contact__value">+994 12 555 12 12</span>
+            <span class="contact__value">+994 50 307 49 07</span>
           </div>
           <div class="contact__item">
             <span class="contact__label">Mail</span>
-            <span class="contact__value">office@example.com</span>
+            <span class="contact__value">repairteama@gmail.com</span>
           </div>
         </div>
       </div>
@@ -67,6 +81,7 @@
     <main class="content">
       <header class="topbar">
         <div>
+          <button class="page-back" id="page-back" type="button" data-page="projects" aria-hidden="true">← Geri</button>
           <p class="eyebrow" id="page-eyebrow">Haqqında</p>
           <h1 id="page-title">Haqqımızda</h1>
         </div>
@@ -74,167 +89,1258 @@
       </header>
 
       <section class="page is-visible" id="dashboard" aria-labelledby="dashboard-title" data-eyebrow="Haqqında" data-title="Haqqımızda">
-        <div class="page__grid">
-          <div class="card highlight">
-            <h2 id="dashboard-title">İdarə paneli</h2>
-            <p>Prioritet tapşırıqlar, kritik xəbərdarlıqlar və gündəlik dinamika burada.</p>
-            <div class="stats">
-              <div>
-                <span class="stats__label">Aktiv layihə</span>
-                <span class="stats__value">12</span>
+        <div class="page__grid about-grid">
+          <div class="card highlight about-card">
+            <div class="about-split">
+              <div class="about-media">
+                <img src="Review/logo-transparent-V2.png" alt="Repair Team logo">
               </div>
-              <div>
-                <span class="stats__label">Gecikmələr</span>
-                <span class="stats__value">2</span>
-              </div>
-              <div>
-                <span class="stats__label">Yeni sorğu</span>
-                <span class="stats__value">8</span>
+              <div class="about-content">
+                <h2 id="dashboard-title">Repair Team MMC</h2>
+                <p>15 ilə yaxındır ki, Azərbaycanın bütün bölgələrində Profesional mətbəx avadanlıqlarının, təmiri və texniki servis xidməti göstəririk.</p>
+                <p>Şirkətimizi təşkil edən idarə heyəti və kollektivimiz bu sahədə geniş təcrübəyə malikdir.</p>
+                <p>Peşəkar mətbəx avadanlıqlarının keyfiyyətli və dayanıqlı olması restoranın prestiji və müştəri məmnuniyyəti deməkdir.</p>
+                <p>Avadanlıqların vaxtaşırı texniki qulluq göstərilməsi bütün iş prosesinin sərfəliliyinə və səmərəliliyinə təsir göstərir. Zəmanətli avadanlıqlar vaxtında qulluq göstərilməsi onların dayanıqlılığı və istismarının müddətinin uzadılması deməkdir.</p>
+                <ul class="about-list">
+                  <li>Peşəkar mətbəx avadanlıqlarının təmiri və servisi</li>
+                  <li>Otaq tipli soyuducu sistemlərinin baxışı və qurulması</li>
+                  <li>Planlı texniki qulluq və operativ servis xətti</li>
+                </ul>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <h3>Son aktivlik</h3>
-            <ul class="list">
-              <li><span>Brifinq təsdiqləndi</span><span>09:20</span></li>
-              <li><span>Marketinq planı yeniləndi</span><span>10:05</span></li>
-              <li><span>Müştəri görüşü planlandı</span><span>11:30</span></li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Resurs yüklənməsi</h3>
-            <div class="meter">
-              <span style="width:72%"></span>
-            </div>
-            <p class="muted">Bu həftə komanda 72% kapasitedə işləyir.</p>
           </div>
         </div>
       </section>
 
       <section class="page" id="projects" aria-labelledby="projects-title" data-eyebrow="Servis" data-title="Servis göstərdiyimiz avadanlıqlar">
-        <div class="page__grid">
+        <div class="page__grid service-grid">
           <div class="card service-card" data-page="fridge" role="button" tabindex="0" aria-label="Soyuducu haqqında">
-            <h2 id="projects-title">Soyuducu</h2>
-            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
-            <div class="service-card__title">Soyuducu</div>
-            <div class="service-card__meta">Məişət və sənaye tipli soyutma sistemləri</div>
+            <img class="service-card__image" src="Review/soyuducu.png" alt="Soyuducu">
+            <div class="service-card__body">
+              <h2 id="projects-title">Soyuducular</h2>
+              <div class="service-card__meta">Məişət və sənaye tipli soyutma sistemləri</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
           </div>
           <div class="card service-card" data-page="oven" role="button" tabindex="0" aria-label="Soba haqqında">
-            <h3>Soba</h3>
-            <p class="muted">Kliklə və ətraflı məlumata keç.</p>
-            <div class="service-card__title">Soba</div>
-            <div class="service-card__meta">Qaz və elektrik soba modelləri</div>
+            <img class="service-card__image" src="Review/soba.png" alt="Soba">
+            <div class="service-card__body">
+              <h3>Sobalar</h3>
+              <div class="service-card__meta">Qaz və elektrik soba modelləri</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+          <div class="card service-card" data-page="helper" role="button" tabindex="0" aria-label="Köməkçi avadanlıqlar haqqında">
+            <img class="service-card__image service-card__image--contain" src="Review/komekci-avadanliqlar.png" alt="Köməkçi avadanlıqlar">
+            <div class="service-card__body">
+              <h3>Köməkçi avadanlıqlar</h3>
+              <div class="service-card__meta">Gündəlik məişət cihazları</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+          <div class="card service-card" data-page="service-line" role="button" tabindex="0" aria-label="Servis xətti haqqında">
+            <img class="service-card__image" src="Review/servis-xetti.png" alt="Servis xətti">
+            <div class="service-card__body">
+              <h3>Servis xətti</h3>
+              <div class="service-card__meta">Bənmari, Salatbar, Notr dəzgahı, Küvərlik</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+          <div class="card service-card" data-page="laundry" role="button" tabindex="0" aria-label="Yuma və qabyuyan maşınlar haqqında">
+            <img class="service-card__image service-card__image--contain" src="Review/qabyuyan.png" alt="Qabyuyan">
+            <div class="service-card__body">
+              <h3>Yuma Dəzgahları və qabyuyan maşınlar</h3>
+              <div class="service-card__meta">Dəzgahlar və qabyuyan sistemlər</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+          <div class="card service-card" data-page="cookers" role="button" tabindex="0" aria-label="Bişiricilər haqqında">
+            <img class="service-card__image" src="Review/bisiriciler.png" alt="Bişiricilər">
+            <div class="service-card__body">
+              <h3>Bişiricilər</h3>
+              <div class="service-card__meta">Kiçik mətbəx cihazları</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="page" id="fridge" aria-labelledby="fridge-title" data-eyebrow="Ətraflı" data-title="Soyuducu">
+      <section class="page" id="fridge" aria-labelledby="fridge-title" data-eyebrow="Ətraflı" data-title="Soyuducu servisi" data-back="projects">
         <div class="page__grid">
           <div class="card highlight">
-            <h2 id="fridge-title">Soyuducu servisi</h2>
-            <p>Servis xidməti: diaqnostika, freon doldurma, kompressor və elektron lövhə təmiri.</p>
-            <ul class="list">
-              <li><span>Yerində baxış</span><span>30 dəq</span></li>
-              <li><span>Ehtiyat hissə</span><span>Orijinal</span></li>
-              <li><span>Zəmanət</span><span>6 ay</span></li>
-            </ul>
-            <button class="pill" data-page="projects">Geri qayıt</button>
+            <h2 id="fridge-title" class="visually-hidden">Soyuducu servisi</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/Soyuducular/Derin-soyuducu.png" alt="Dərin soyuducu" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Dərin soyuducu</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Sensor və termostat</li>
+                      <li>Kompressor</li>
+                      <li>Qapı rezini</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/Kicic-soyuducu-dolab.png" alt="Kiçik soyuducu dolab" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Kiçik soyuducu dolab</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İşıqlandırma</li>
+                      <li>İzolyasiya</li>
+                      <li>Elektron lövhə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/Soyuducu-otaq.png" alt="Soyuducu otaq" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Soyuducu otaq</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Panel və idarəetmə</li>
+                      <li>Fan və hava dövranı</li>
+                      <li>Qapı mexanizmi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/pizza-stendi.png" alt="Pizza stendi" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Pizza stendi</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Soyutma bloku</li>
+                      <li>Şüşə və örtük</li>
+                      <li>Temperatur tənzimləmə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/soyuducu-dezgah-pizza.png" alt="Soyuducu dəzgah (pizza)" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Soyuducu dəzgah (pizza)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Freon səviyyəsi</li>
+                      <li>Qapı mexanizmi</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/soyuducu-dezgah.png" alt="Soyuducu dəzgah" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Soyuducu dəzgah</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Kondensator təmizliyi</li>
+                      <li>Termostat sazlaması</li>
+                      <li>Qapı rezini</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/soyuducu-dolab-su.png" alt="Soyuducu dolab (su)" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Soyuducu dolab (su)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Su dövranı</li>
+                      <li>Pompa</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Soyuducular/soyuducu-sirniyyat-vitrini.png" alt="Şirniyyat vitrini" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Şirniyyat vitrini</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Şüşə buğlanma</li>
+                      <li>Fan və hava dövranı</li>
+                      <li>Temperatur sabitliyi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>Sensor və termostat</li>
+                <li>Kompressor</li>
+                <li>Qapı rezini</li>
+                <li>Elektron lövhə</li>
+                <li>Hava dövranı</li>
+                <li>Temperatur sabitliyi</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="page" id="oven" aria-labelledby="oven-title" data-eyebrow="Ətraflı" data-title="Soba">
+      <section class="page" id="oven" aria-labelledby="oven-title" data-eyebrow="Ətraflı" data-title="Soba servisi" data-back="projects">
         <div class="page__grid">
           <div class="card highlight">
-            <h2 id="oven-title">Soba servisi</h2>
-            <p>Servis xidməti: alov sistemi, termostat, sensor və elektrik xətti yoxlanışı.</p>
-            <ul class="list">
-              <li><span>Yerində baxış</span><span>30 dəq</span></li>
-              <li><span>Təhlükəsizlik</span><span>Testlə</span></li>
-              <li><span>Zəmanət</span><span>6 ay</span></li>
+            <h2 id="oven-title" class="visually-hidden">Soba servisi</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/Sobalar/Konveksion-Soba.png" alt="Konveksion soba" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Konveksion soba</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Fan və hava dövranı</li>
+                      <li>Temperatur sabitliyi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Sobalar/Çox-funksiyalı-daşlı-soba.png" alt="Çox funksiyalı daşlı soba" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Çox funksiyalı daşlı soba</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Daş bazası</li>
+                      <li>İsitmə elementləri</li>
+                      <li>İdarəetmə paneli</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Sobalar/Doner-arabali-soba.png" alt="Dönər arabalı soba" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Dönər arabalı soba</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Motor və mexanizm</li>
+                      <li>İsitmə bölməsi</li>
+                      <li>Elektrik bağlantıları</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Sobalar/Pizza-sobası-iki-qatlı.png" alt="Pizza sobası iki qatlı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Pizza sobası iki qatlı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İstilik paylanması</li>
+                      <li>İzolyasiya</li>
+                      <li>Panel və sensorlar</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>İsitmə sistemi</li>
+                <li>Sensor və termostat</li>
+                <li>Elektrik xətti</li>
+                <li>İdarəetmə paneli</li>
+                <li>Qapı mexanizmi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="helper" aria-labelledby="helper-title" data-eyebrow="Ətraflı" data-title="Köməkçi avadanlıqlar servisi" data-back="projects">
+        <div class="page__grid service-grid">
+          <div class="card service-card" data-page="helper-prep" role="button" tabindex="0" aria-label="Hazırlıq avadanlıqları">
+            <img class="service-card__image service-card__image--contain" src="Review/Hazirliq-avadanliqlari.png" alt="Hazırlıq avadanlıqları">
+            <div class="service-card__body">
+              <h3 id="helper-title">Hazırlıq avadanlıqları</h3>
+              <div class="service-card__meta">Doğrama və qarışdırma cihazları</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+          <div class="card service-card" data-page="helper-fastfood" role="button" tabindex="0" aria-label="Fastfood avadanlıqları">
+            <img class="service-card__image service-card__image--contain" src="Review/Fast-food-avadanliqlari.png" alt="Fastfood avadanlıqları">
+            <div class="service-card__body">
+              <h3>Fastfood avadanlıqları</h3>
+              <div class="service-card__meta">Sürətli hazırlıq cihazları</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+          <div class="card service-card" data-page="helper-dough" role="button" tabindex="0" aria-label="Xəmir hazırlama avadanlıqları">
+            <img class="service-card__image service-card__image--contain" src="Review/Xemir-hazirlama-avadanliqlari.png" alt="Xəmir hazırlama avadanlıqları">
+            <div class="service-card__body">
+              <h3>Xəmir hazırlama avadanlıqları</h3>
+              <div class="service-card__meta">Xəmir yoğurma və açma</div>
+              <p class="muted">Kliklə və ətraflı məlumata keç.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="helper-prep" aria-labelledby="helper-prep-title" data-eyebrow="Ətraflı" data-title="Hazırlıq avadanlıqları servisi" data-back="helper">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="helper-prep-title" class="visually-hidden">Hazırlıq avadanlıqları</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/el-blenderi.png" alt="Əl blenderi" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Əl blenderi</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Motor</li>
+                      <li>Elektrik xətti</li>
+                      <li>Bağlantılar</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/et-ceken-masin.png" alt="Ət çəkən maşın" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Ət çəkən maşın</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Şnek mexanizmi</li>
+                      <li>Motor</li>
+                      <li>Bıçaq dəsti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/terevez-dograyan.png" alt="Tərəvəz doğrayıcı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Tərəvəz doğrayıcı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Kəsici disk</li>
+                      <li>Motor</li>
+                      <li>Qapaq kilidi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/sogan-dograyan.png" alt="Soğan doğrayıcı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Soğan doğrayıcı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Kəsici bıçaqlar</li>
+                      <li>Motor</li>
+                      <li>Qapaq kilidi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/kartof-soyan.png" alt="Kartof soyan" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Kartof soyan</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Dönmə mexanizmi</li>
+                      <li>Elektrik xətti</li>
+                      <li>Su dövranı</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/corek-dilimleyen.png" alt="Çörək dilimləyən" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Çörək dilimləyən</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Bıçaq xətti</li>
+                      <li>Motor</li>
+                      <li>Təhlükəsizlik qapağı</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/sumuk-dograyan.png" alt="Sümük doğrayıcı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Sümük doğrayıcı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Kəsici blok</li>
+                      <li>Motor</li>
+                      <li>Güc ötürməsi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/Vakuum-aparati.png" alt="Vakuum aparatı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Vakuum aparatı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Pompa</li>
+                      <li>Rezini</li>
+                      <li>Elektron lövhə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Hazirliq-avadanliqlari/banket-arabasi.png" alt="Banket arabası" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Banket arabası</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Qızdırma sistemi</li>
+                      <li>Elektrik xətti</li>
+                      <li>Təkər mexanizmi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>Motor və mexanizm</li>
+                <li>Kəsici/yoğurma sistemləri</li>
+                <li>Elektrik xətti</li>
+                <li>İdarə paneli</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="helper-fastfood" aria-labelledby="helper-fastfood-title" data-eyebrow="Ətraflı" data-title="Fastfood avadanlıqları servisi" data-back="helper">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="helper-fastfood-title" class="visually-hidden">Fastfood avadanlıqları</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/fast-food-avadanliqlari/salamander.png" alt="Salamander" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Salamander</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Sensorlar</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/fast-food-avadanliqlari/toster.png" alt="Toster" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Toster</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Qızdırma elementləri</li>
+                      <li>Termostat</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/fast-food-avadanliqlari/vafli-hazirlayan.png" alt="Vafli hazırlayan" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Vafli hazırlayan</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Qapaq mexanizmi</li>
+                      <li>Elektrik bağlantıları</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/fast-food-avadanliqlari/feseli-hazirlayan.png" alt="Fəsəli hazırlayan" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Fəsəli hazırlayan</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>İdarə paneli</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>İsitmə sistemi</li>
+                <li>Sensor və termostat</li>
+                <li>Elektrik xətti</li>
+                <li>İdarə paneli</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="helper-dough" aria-labelledby="helper-dough-title" data-eyebrow="Ətraflı" data-title="Xəmir hazırlama avadanlıqları servisi" data-back="helper">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="helper-dough-title" class="visually-hidden">Xəmir hazırlama avadanlıqları</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Spiral-Mikser.png" alt="Spiral mikser" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Spiral mikser</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Motor</li>
+                      <li>Qol mexanizmi</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Planet-Mikser.png" alt="Planet mikser" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Planet mikser</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Ötürücü sistem</li>
+                      <li>Qarışdırıcı başlıq</li>
+                      <li>Elektron lövhə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Xəmir-Yoğuran.png" alt="Xəmir yoğuran" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Xəmir yoğuran</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Yoğurma mexanizmi</li>
+                      <li>Motor</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Xəmir-Açan.png" alt="Xəmir açan" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Xəmir açan</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Rulon sistemi</li>
+                      <li>Qayış</li>
+                      <li>Motor</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Xəmirə-Forma-Verən-Maşın.png" alt="Xəmirə forma verən maşın" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Xəmirə forma verən maşın</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Kalibrləmə</li>
+                      <li>Kəsmə sistemi</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/kunde-yuvarlayan.png" alt="Kündə yuvarlayan" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Kündə yuvarlayan</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Rol mexanizmi</li>
+                      <li>Motor</li>
+                      <li>İdarəetmə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/un-eleyen-masin.png" alt="Un ələyən maşın" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Un ələyən maşın</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Ələmə sistemi</li>
+                      <li>Vibrasiya</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Kəsmə-ve-Çəki-Maşını.png" alt="Kəsmə və çəki maşını" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Kəsmə və çəki maşını</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Kalibrləmə</li>
+                      <li>Kəsmə sistemi</li>
+                      <li>Sensorlar</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Ara-Dinləndirmə.png" alt="Ara dinləndirmə" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Ara dinləndirmə</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Konveyer</li>
+                      <li>Motor</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/xemir-hazirliq-avadanliqlari/Xəmir-Mayalandırma-Otağı.png" alt="Xəmir mayalandırma otağı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Xəmir mayalandırma otağı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İqlim nəzarəti</li>
+                      <li>Sensorlar</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>Motor və ötürücü</li>
+                <li>Kəsmə/forma mexanizmi</li>
+                <li>Elektrik xətti</li>
+                <li>Sensorlar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="service-line" aria-labelledby="service-line-title" data-eyebrow="Ətraflı" data-title="Servis xətti servisi" data-back="projects">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="service-line-title" class="visually-hidden">Servis xətti</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/Servis-xetti/Bənmari.png" alt="Bənmari" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Bənmari</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Termostat</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Servis-xetti/Salatbar.png" alt="Salatbar" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Salatbar</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Soyutma bloku</li>
+                      <li>İdarə paneli</li>
+                      <li>Fan və hava dövranı</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>İsitmə və soyutma sistemi</li>
+                <li>Sensor və termostat</li>
+                <li>Elektrik xətti</li>
+                <li>İdarə paneli</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="laundry" aria-labelledby="laundry-title" data-eyebrow="Ətraflı" data-title="Yuma və qabyuyan maşınlar servisi" data-back="projects">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="laundry-title" class="visually-hidden">Yuma və qabyuyan maşınlar servisi</h2>
+            <p class="visually-hidden">Paltaryuyan və qabyuyan sistemlərin diaqnostika və təmiri.</p>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/Qabyuyan/Qabyuyan-maşın.png" alt="Qabyuyan maşın" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Qabyuyan maşın</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Pompa</li>
+                      <li>Sensorlar</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Qabyuyan/Gilyotin-tipli-qabyuyan-maşın.png" alt="Gilyotin tipli qabyuyan maşın" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Gilyotin tipli qabyuyan maşın</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Su dövranı</li>
+                      <li>Qapı mexanizmi</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Qabyuyan/Konveyer-tipli-qabyuyan-maşın.png" alt="Konveyer tipli qabyuyan maşın" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Konveyer tipli qabyuyan maşın</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Konveyer xətti</li>
+                      <li>Motor</li>
+                      <li>Elektron lövhə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>Pompa və su dövranı</li>
+                <li>Sensorlar</li>
+                <li>İsitmə sistemi</li>
+                <li>Elektrik xətti</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="cookers" aria-labelledby="cookers-title" data-eyebrow="Ətraflı" data-title="Bişiricilər servisi" data-back="projects">
+        <div class="page__grid">
+          <div class="card highlight">
+            <h2 id="cookers-title" class="visually-hidden">Bişiricilər servisi</h2>
+            <div class="fridge-grid">
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/4-gozlu-elektrik-peci-dolabli.png" alt="4 gözlü elektrik peçi dolablı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>4 gözlü elektrik peçi (dolablı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Qızdırma sistemi</li>
+                      <li>Termostat</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/4-gozlu-elektrik-peci-sobali.png" alt="4 gözlü elektrik peçi sobalı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>4 gözlü elektrik peçi (sobalı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Qızdırma sistemi</li>
+                      <li>Sensorlar</li>
+                      <li>İdarə paneli</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/4-gozlu-qaz-peci-dolabli.png" alt="4 gözlü qaz peçi dolablı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>4 gözlü qaz peçi (dolablı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Alov sistemi</li>
+                      <li>Termostat</li>
+                      <li>Qaz bağlantısı</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/4-gozlu-qaz-peci-sobali.png" alt="4 gözlü qaz peçi sobalı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>4 gözlü qaz peçi (sobalı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Alov sistemi</li>
+                      <li>Sensorlar</li>
+                      <li>Qaz xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/6-gozlu-elektrik-peci-dolabli.png" alt="6 gözlü elektrik peçi dolablı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>6 gözlü elektrik peçi (dolablı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Qızdırma sistemi</li>
+                      <li>Termostat</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/6-gozlu-elektrik-peci-sobali.png" alt="6 gözlü elektrik peçi sobalı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>6 gözlü elektrik peçi (sobalı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Sensorlar</li>
+                      <li>İdarə paneli</li>
+                      <li>İstilik paylanması</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/6-gozlu-qaz-peci-dolabli.png" alt="6 gözlü qaz peçi dolablı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>6 gözlü qaz peçi (dolablı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Alov sistemi</li>
+                      <li>Qaz xətti</li>
+                      <li>Termostat</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/6-gozlu-qaz-peci-sobali.png" alt="6 gözlü qaz peçi sobalı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>6 gözlü qaz peçi (sobalı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Alov sistemi</li>
+                      <li>Sensorlar</li>
+                      <li>Qaz bağlantısı</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/Devrilir-tava.png" alt="Devrilir tava" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Devrilir tava</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Qaldırma mexanizmi</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/Fritöz-dolablı-iki%20gözlü.png" alt="Fritöz dolablı iki gözlü" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Fritöz (dolablı, iki gözlü)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə elementi</li>
+                      <li>Yağ temperaturu</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/Fritöz-set%20üstü-iki%20gözlü.png" alt="Fritöz set üstü iki gözlü" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Fritöz (set üstü, iki gözlü)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə elementi</li>
+                      <li>Sensorlar</li>
+                      <li>İdarə paneli</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/Qaynatma-qazanı.png" alt="Qaynatma qazanı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Qaynatma qazanı</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Termostat</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/yer-ocaqi-elektrikli.png" alt="Yer ocağı elektrikli" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Yer ocağı (elektrikli)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Qızdırma sistemi</li>
+                      <li>Elektrik xətti</li>
+                      <li>İdarəetmə</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/yer-ocaqi-qazli.png" alt="Yer ocağı qazlı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>Yer ocağı (qazlı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>Alov sistemi</li>
+                      <li>Qaz xətti</li>
+                      <li>Termostat</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/İzqara-dolablı.png" alt="İzqara dolablı" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>İzqara (dolablı)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>İdarə paneli</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="fridge-card">
+                <img src="images/Bisiriciler/İzqara-set-üstü.png" alt="İzqara set üstü" class="fridge-card__image">
+                <div class="fridge-card__body">
+                  <h3>İzqara (set üstü)</h3>
+                  <div class="fridge-card__fix">
+                    <p>Nəyi düzəldirik:</p>
+                    <ul>
+                      <li>İsitmə sistemi</li>
+                      <li>Sensorlar</li>
+                      <li>Elektrik xətti</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fix-summary">
+              <h3>Ümumi düzəldilənlər</h3>
+              <ul>
+                <li>İsitmə sistemi</li>
+                <li>Sensor və termostat</li>
+                <li>Elektrik xətti</li>
+                <li>İdarə paneli</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="calendar" aria-labelledby="calendar-title" data-eyebrow="Qiymət" data-title="Qiymətləndirmə və Müqavilə">
+        <div class="deal-grid">
+          <div class="deal-card">
+            <div class="deal-header">
+              <h2 id="calendar-title">Qiymətləndirilmə</h2>
+            </div>
+            <p class="deal-subtitle">Qiymətlər bu amillərə görə tənzimlənir</p>
+            <div class="deal-flow">
+              <ul class="deal-list">
+                <li>Tək çağırış</li>
+                <li>Aylıq müqavilə</li>
+                <li>İllik müqavilə</li>
+              </ul>
+              <ul class="deal-list">
+                <li>Məsafə</li>
+                <li>Avadanlıqların növü</li>
+                <li>Avadanlığın sayı</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-header">
+              <h2>Müqavilə</h2>
+            </div>
+            <ul class="deal-steps">
+              <li>İlk növbədə monitorinq keçirilir, avadanlıqların nasazlığı təyin olunur</li>
+              <li>Qüsur aktı yazılır və qiymət təklifi təqdim olunur</li>
+              <li>Müqavilə bağlanıb əməkdaşlığa başlanılır</li>
             </ul>
-            <button class="pill" data-page="projects">Geri qayıt</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="page" id="calendar" aria-labelledby="calendar-title" data-eyebrow="Qiymət" data-title="Qiymətləndirmə">
-        <div class="page__grid">
-          <div class="card">
-            <h2 id="calendar-title">Təqvim</h2>
-            <p>Bu həftə planlaşdırılan əsas görüşlər.</p>
-            <div class="timeline">
-              <div>
-                <span class="timeline__time">B.e 14:00</span>
-                <span>Strategiya iclası</span>
-              </div>
-              <div>
-                <span class="timeline__time">Ç.a 10:30</span>
-                <span>Dizayn təqdimatı</span>
-              </div>
-              <div>
-                <span class="timeline__time">C.a 16:00</span>
-                <span>Müştəri demo</span>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Tez xatırlatma</h3>
-            <p>Komanda reytinqi üçün sorğunu cümə axşamına qədər tamamlayın.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="page" id="team" aria-labelledby="team-title" data-eyebrow="Sənədlər" data-title="Müqavilə">
-        <div class="page__grid">
-          <div class="card">
-            <h2 id="team-title">Komanda</h2>
-            <p>Prioritet rollar və fokus sahələri.</p>
-            <div class="avatar-row">
-              <span>R. Məmmədova</span>
-              <span>N. Əliyev</span>
-              <span>L. Qasımova</span>
-              <span>T. Həsənli</span>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Performans</h3>
-            <div class="meter">
-              <span style="width:88%"></span>
-            </div>
-            <p class="muted">Komandanın hədəfləri 88% səviyyəsində icradadır.</p>
           </div>
         </div>
       </section>
 
       <section class="page" id="reports" aria-labelledby="reports-title" data-eyebrow="Tərəfdaşlar" data-title="Əməkdaşlıq etdiklərimiz">
-        <div class="page__grid">
-          <div class="card">
-            <h2 id="reports-title">Hesabatlar</h2>
-            <p>Rəqəmsal göstəricilər və nəticələr.</p>
-            <div class="report-grid">
-              <div>
-                <span class="report__label">Aylıq gəlir</span>
-                <span class="report__value">₼ 128,400</span>
-              </div>
-              <div>
-                <span class="report__label">Müştəri məmnunluğu</span>
-                <span class="report__value">94%</span>
-              </div>
-              <div>
-                <span class="report__label">Gözləmədə</span>
-                <span class="report__value">6</span>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Yükləmələr</h3>
-            <p>Son 7 gün ərzində 14 yeni hesabat əlavə olunub.</p>
-            <button class="pill">Arxivə bax</button>
+        <div class="card partners-card">
+          <h2 id="reports-title">Əməkdaşlıq etdiyimiz şirkətlər</h2>
+          
+          <div class="partners-grid">
+            <article class="partner-item">
+              <a href="https://www.shaurma.az/" target="_blank" rel="noopener noreferrer">
+                <img src='images/Emekdasliq-logo/"Shaurma N-1" restoranlar şəbəkəsi.png' alt='"Shaurma N-1" restoranlar şəbəkəsi loqosu'>
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.shaurma.az/" target="_blank" rel="noopener noreferrer">"Shaurma N-1" restoranlar şəbəkəsi</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://www.metro.gov.az" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Azerbaycan-Baki-Metropoleni.png" alt="Azərbaycan Bakı Metropoleni loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.metro.gov.az" target="_blank" rel="noopener noreferrer">Azərbaycan Bakı Metropoleni</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://www.bakuoxfordschool.com/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Baku-Oxford-school.png" alt="Baku Oxford School loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.bakuoxfordschool.com/" target="_blank" rel="noopener noreferrer">Baku Oxford School</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://basqalresort.az" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Baskal-İstirahət-Kompleksi.png" alt="Baskal İstirahət Kompleksi loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://basqalresort.az" target="_blank" rel="noopener noreferrer">Baskal İstirahət Kompleksi</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://khankendihotels.az/az/bulud-hotel" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Bulud-teracce-hotel.png" alt="Bulud Terrace Hotel loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://khankendihotels.az/az/bulud-hotel" target="_blank" rel="noopener noreferrer">Bulud Terrace Hotel</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://lachinresort.az/az" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Lachin Resort &amp; Spa.png" alt="Lachin Resort and Spa loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://lachinresort.az/az" target="_blank" rel="noopener noreferrer">Lachin Resort &amp; Spa</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://www.marxalresort.az/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Marxal-Müalicəvi-İstirahət-Kompleksi.png" alt="Marxal Müalicəvi İstirahət Kompleksi loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.marxalresort.az/" target="_blank" rel="noopener noreferrer">Marxal Müalicəvi İstirahət Kompleksi</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://www.khankendihotels.az/en/palace-hotel" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Palace-hotel.png" alt="Palace Hotel loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.khankendihotels.az/en/palace-hotel" target="_blank" rel="noopener noreferrer">Palace Hotel</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://khankendihotels.az/en/qarabagh-hotel" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Qarabağ-otel .png" alt="Qarabağ otel loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://khankendihotels.az/en/qarabagh-hotel" target="_blank" rel="noopener noreferrer">Qarabağ Otel</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://saffron.az/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Saffron-resraurant.png" alt="Saffron Restaurant loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://saffron.az/" target="_blank" rel="noopener noreferrer">Saffron Restaurant</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://smarton.az/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/SmartOn-MMC.png" alt="SmartOn MMC loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://smarton.az/" target="_blank" rel="noopener noreferrer">SmartOn MMC</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://starinox.az/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Star-inox.png" alt="Star Inox loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://starinox.az/" target="_blank" rel="noopener noreferrer">Star Inox</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://khankendihotels.az/az" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Xankəndi-Mehmanxana-Kompleksi.png" alt="Xankəndi Mehmanxana Kompleksi loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://khankendihotels.az/az" target="_blank" rel="noopener noreferrer">Xankəndi Mehmanxana Kompleksi</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <img src="images/Emekdasliq-logo/Xarı-bülbül-oteli.png" alt="Xarı bülbül oteli loqosu">
+              <h3 class="partner-item__name">Xarı bülbül oteli</h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://shushahotels.com/yasemen-hotel" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Yasemen Hotel &amp; Restaurant.png" alt="Yasemen Hotel and Restaurant loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://shushahotels.com/yasemen-hotel" target="_blank" rel="noopener noreferrer">Yasemen Hotel &amp; Restaurant</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://cronos.az/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/cronos-removebg-preview.png" alt="Cronos loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://cronos.az/" target="_blank" rel="noopener noreferrer">Cronos</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://www.dfn.az/en" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/dolce-far-niente.png" alt="Dolce Far Niente loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.dfn.az/en" target="_blank" rel="noopener noreferrer">Dolce Far Niente</a>
+              </h3>
+            </article>
+            <article class="partner-item">
+              <a href="https://www.shabranwellbeing.az/az" target="_blank" rel="noopener noreferrer">
+                <img src="images/Emekdasliq-logo/Şabran-Yaradıcılıq-İstirahət-Kompleksi.png" alt="Şabran Yaradıcılıq İstirahət Kompleksi loqosu">
+              </a>
+              <h3 class="partner-item__name">
+                <a href="https://www.shabranwellbeing.az/az" target="_blank" rel="noopener noreferrer">Şabran Yaradıcılıq İstirahət Kompleksi</a>
+              </h3>
+            </article>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="footer__logo">REPAIR TEAM</span>
+          <span class="footer__sub">Professional Service</span>
+        </div>
+        <div class="footer__links">
+          <a href="#dashboard">Haqqımızda</a>
+          <a href="#projects">Servis</a>
+          <a href="#calendar">Qiymətləndirmə</a>
+          <a href="#reports">Əməkdaşlıq</a>
+          <a href="#projects">Əlaqə</a>
+        </div>
+        <div class="footer__info"></div>
+        <div class="footer__meta">
+          <div class="footer__copy">© 2026 Repair Team</div>
+          <div class="footer__credit">
+            <img src="Review/personal-logo.png" alt="Koktail loqosu">
+            <span>Created&amp;Designet by Koktail</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </div>
 
   <script src="main.js"></script>
